@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="0" style="-fx-background-color: #ecf0f1;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.espoch.grafo.GraphController">
+    
+    <!-- Barra superior con fondo oscuro -->
+    <VBox spacing="10" style="-fx-padding: 15;">
+      <Label text="GRAFOS DIRECCIONALES">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+        
+        <!-- Primera fila: Operaciones de nodos -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label style="-fx-font-size: 14px;" text="Valor del Nodo:" />
+            <TextField fx:id="nodoTextField" prefWidth="150" promptText="Ingrese un número" style="-fx-background-color: white; -fx-border-color: #34495e; -fx-border-radius: 3; -fx-background-radius: 3;" />
+            <Button fx:id="agregarNodoBtn" onAction="#onAgregarNodo" prefWidth="130" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 3;" text="Agregar Nodo" />
+        </HBox>
+        
+        <!-- Segunda fila: Operaciones de aristas -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label style="-fx-font-size: 14px;" text="Origen:" />
+            <TextField fx:id="origenTextField" prefWidth="100" promptText="Nodo origen" style="-fx-background-color: white; -fx-border-color: #34495e; -fx-border-radius: 3; -fx-background-radius: 3;" />
+            <Label style="-fx-font-size: 14px;" text="Destino:" />
+            <TextField fx:id="destinoTextField" prefWidth="100" promptText="Nodo destino" style="-fx-background-color: white; -fx-border-color: #34495e; -fx-border-radius: 3; -fx-background-radius: 3;" />
+            <Button fx:id="agregarAristaBtn" onAction="#onAgregarArista" prefWidth="130" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 3;" text="Agregar Arista" />
+        </HBox>
+        
+        <!-- Tercera fila: Operaciones de gestión -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label style="-fx-font-size: 14px;" text="Eliminar:" />
+            <TextField fx:id="eliminarTextField" prefWidth="200" promptText="Nodo o 'origen,destino'" style="-fx-background-color: white; -fx-border-color: #34495e; -fx-border-radius: 3; -fx-background-radius: 3;" />
+            <Button fx:id="eliminarBtn" onAction="#onEliminar" prefWidth="100" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 3;" text="Eliminar" />
+            <Button fx:id="limpiarBtn" onAction="#onLimpiar" prefWidth="100" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 3;" text="Limpiar" />
+        </HBox>
+        
+    </VBox>
+    
+    <!-- Área de mensajes -->
+    <Label fx:id="mensajeLabel" maxHeight="80" minHeight="40" prefHeight="50" style="-fx-padding: 10; -fx-font-size: 13px; -fx-font-weight: bold; -fx-background-color: transparent;" text="" wrapText="true" />
+    
+    <!-- Área central con ScrollPane y Canvas -->
+    <ScrollPane fx:id="scrollPane" fitToHeight="false" fitToWidth="false" style="-fx-background-color: #ecf0f1;" VBox.vgrow="ALWAYS">
+        <Canvas fx:id="canvas" height="600" width="800" />
+    </ScrollPane>
+    
+</VBox>
