@@ -5,10 +5,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox spacing="0" style="-fx-background-color: #ecf0f1;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.espoch.grafo.GraphController">
+<VBox spacing="0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.espoch.grafo.controller.GraphController">
     
     <!-- Barra superior con fondo oscuro -->
-    <VBox spacing="10" style="-fx-padding: 15;">
+    <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: blue;">
       <Label text="GRAFOS DIRECCIONALES">
          <font>
             <Font name="Berlin Sans FB" size="19.0" />

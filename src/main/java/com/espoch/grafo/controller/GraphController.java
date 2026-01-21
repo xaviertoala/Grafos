@@ -1,5 +1,8 @@
-package com.espoch.grafo;
+package com.espoch.grafo.controller;
 
+import com.espoch.grafo.view.ForceDirectedLayout;
+import com.espoch.grafo.model.GrafoDireccional;
+import com.espoch.grafo.model.Nodo;
 import javafx.animation.AnimationTimer;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;

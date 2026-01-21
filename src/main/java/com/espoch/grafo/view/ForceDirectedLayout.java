@@ -1,4 +1,6 @@
-package com.espoch.grafo;
+package com.espoch.grafo.view;
+
+import com.espoch.grafo.model.Nodo;
 
 import java.util.List;
 

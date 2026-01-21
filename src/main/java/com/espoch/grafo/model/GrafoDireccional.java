@@ -1,4 +1,4 @@
-package com.espoch.grafo;
+package com.espoch.grafo.model;
 
 import java.util.ArrayList;
 import java.util.List;
